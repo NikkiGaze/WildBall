@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
     
     [SerializeField] private GameObject _levelPrefab;
     [SerializeField] private List<SceneAsset> _levelsList;
+    
     private void Start()
     {
         foreach (Transform child in _levelsPanel.transform)
