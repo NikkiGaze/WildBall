@@ -16,7 +16,6 @@ public class LevelHUD : MonoBehaviour
         isPaused = !isPaused;
         _restartButton.SetActive(isPaused);
         _menuButton.SetActive(isPaused);
-            
     }
     
     public void OnRestartPressed()
