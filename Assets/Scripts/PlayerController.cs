@@ -5,9 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem _movementParticle;
+    [SerializeField] private ParticleSystem _deathParticle;
     [SerializeField, Range(0, 10)] private float _speed;
     private Rigidbody _rigidBody;
     private Vector3 _movementVector;
+    private bool _isDead;
     
     private const string HorizontalInput = "Horizontal";
     private const string VerticalInput = "Vertical";
@@ -25,7 +28,18 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (_isDead)
+        {
+            return;
+        }
         _rigidBody.AddForce(_movementVector);
+    }
+    
+    public void Kill()
+    {
+        _movementParticle.Stop();
+        _deathParticle.Play();
+        Destroy(gameObject);
     }
 }
 

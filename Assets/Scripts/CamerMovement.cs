@@ -14,6 +14,9 @@ public class CamerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = _playerTransform.position + _playerOffset;
+        if (_playerTransform)
+        {
+            transform.position = _playerTransform.position + _playerOffset;
+        }
     }
 }

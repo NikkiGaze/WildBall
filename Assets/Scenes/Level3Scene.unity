@@ -2254,7 +2254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8186604157705150257, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: PlayerStart
       objectReference: {fileID: 0}
     - target: {fileID: 8186604157705150260, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
       propertyPath: m_Material
@@ -2316,7 +2316,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
 --- !u!4 &1997985950 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8186604157705150267, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6796752293724657261, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
   m_PrefabInstance: {fileID: 1997985949}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2017624928

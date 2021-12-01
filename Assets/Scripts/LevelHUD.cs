@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,11 +8,22 @@ using UnityEngine.SceneManagement;
 public class LevelHUD : MonoBehaviour
 {
     [SerializeField] private SceneAsset _mainMenuScene;
+    
     [SerializeField] private GameObject _restartButton;
     [SerializeField] private GameObject _menuButton;
     [SerializeField] private GameObject _openButton;
+    [SerializeField] private GameObject _pauseButton;
     
-    private bool _isPaused = false;
+    [SerializeField] private GameObject _deathText;
+    
+    private bool _isPaused;
+
+    public void Start()
+    {
+        _isPaused = false;
+        Time.timeScale = 1;
+    }
+
     public void OnPausePressed()
     {
         _isPaused = !_isPaused;
@@ -30,6 +42,13 @@ public class LevelHUD : MonoBehaviour
         SceneManager.LoadScene(_mainMenuScene.name);
     }
     
+    public void KillPlayer()
+    {
+        _deathText.SetActive(true);
+        _restartButton.SetActive(true);
+        _menuButton.SetActive(true);
+        _pauseButton.SetActive(false);
+    }
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

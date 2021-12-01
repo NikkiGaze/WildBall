@@ -676,7 +676,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8186604157705150257, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: PlayerStart
       objectReference: {fileID: 0}
     - target: {fileID: 8186604157705150267, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
       propertyPath: m_RootOrder
@@ -724,6 +724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
+--- !u!4 &1424579777 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6796752293724657261, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
+  m_PrefabInstance: {fileID: 1424579776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540639205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -778,7 +783,7 @@ PrefabInstance:
     - target: {fileID: 6696868622712065361, guid: 5b7644a7306729f4a82c83aa458554d6, type: 3}
       propertyPath: _playerTransform
       value: 
-      objectReference: {fileID: 1621801558}
+      objectReference: {fileID: 1424579777}
     - target: {fileID: 6696868622712065365, guid: 5b7644a7306729f4a82c83aa458554d6, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
@@ -874,11 +879,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e80ab2171c009a43b8cbd7c9c976983, type: 3}
---- !u!4 &1621801558 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8186604157705150267, guid: dd45962425c76a24c8503e7fe969f9e0, type: 3}
-  m_PrefabInstance: {fileID: 1424579776}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2058111294
 PrefabInstance:
   m_ObjectHideFlags: 0
