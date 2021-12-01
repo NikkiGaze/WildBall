@@ -7,8 +7,10 @@ public class FinishProcessor : MonoBehaviour
     [SerializeField] private LevelHUD _HUD;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerController>() != null)
+        PlayerController player = other.GetComponent<PlayerController>();
+        if (player != null)
         {
+            player.Kill(false);
             _HUD.FinishLevel();
         }
     }

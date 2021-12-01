@@ -4929,6 +4929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8dd5b4ee7bf174ba67ef987c3bd253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _platform: {fileID: 0}
   _particle: {fileID: 7805156412607672411}
   _mesh: {fileID: 5731270091407164622}
 --- !u!1 &5731270091407164622

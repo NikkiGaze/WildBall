@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _movementParticle;
     [SerializeField] private ParticleSystem _deathParticle;
+    [SerializeField] private ParticleSystem _winParticle;
     [SerializeField, Range(0, 10)] private float _speed;
     private Rigidbody _rigidBody;
     private Vector3 _movementVector;
@@ -35,10 +36,18 @@ public class PlayerController : MonoBehaviour
         _rigidBody.AddForce(_movementVector);
     }
     
-    public void Kill()
+    public void Kill(bool lost)
     {
         _movementParticle.Stop();
-        _deathParticle.Play();
+
+        if (lost)
+        {
+            _deathParticle.Play();
+        }
+        else
+        {
+            _winParticle.Play();
+        }
         Destroy(gameObject);
     }
 }

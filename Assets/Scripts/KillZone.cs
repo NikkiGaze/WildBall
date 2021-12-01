@@ -11,7 +11,7 @@ public class KillZone : MonoBehaviour
         PlayerController player = other.GetComponent<PlayerController>();
         if (player != null)
         {
-            player.Kill();
+            player.Kill(true);
             _HUD.KillPlayer();
         }
     }
