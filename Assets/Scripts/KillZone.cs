@@ -8,8 +8,8 @@ public class KillZone : MonoBehaviour
     [SerializeField] private LevelHUD _HUD;
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController player = other.GetComponent<PlayerController>();
-        if (player != null)
+        PlayerController player;
+        if (TryGetComponent(out player))
         {
             player.Kill(true);
             _HUD.KillPlayer();

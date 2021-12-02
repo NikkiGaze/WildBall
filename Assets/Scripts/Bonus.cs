@@ -9,8 +9,9 @@ public class Bonus : MonoBehaviour
     [SerializeField] private ParticleSystem _particle;
     [SerializeField] private GameObject _mesh;
     private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<PlayerController>() != null)
+    {    
+        PlayerController player;
+        if (TryGetComponent(out player))
         {
             _particle.Play();
             Destroy(_mesh);

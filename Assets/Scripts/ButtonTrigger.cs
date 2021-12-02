@@ -10,7 +10,9 @@ public class ButtonTrigger : MonoBehaviour
     private bool _isPressed = false;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerController>() != null && !_isPressed)
+        
+        PlayerController player;
+        if (!_isPressed && TryGetComponent(out player))
         {
             _HUD.ShowOpenButton(OnButtonPressed);
         }

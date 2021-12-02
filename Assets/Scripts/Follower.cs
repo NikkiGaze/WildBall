@@ -6,7 +6,7 @@ public class Follower : MonoBehaviour
 {
     [SerializeField] private Transform _originTransform;
 
-    void Update()
+    private void Update()
     {
         if (_originTransform)
         {
