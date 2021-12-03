@@ -9,7 +9,7 @@ public class KillZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerController player;
-        if (TryGetComponent(out player))
+        if (other.TryGetComponent(out player))
         {
             player.Kill(true);
             _HUD.KillPlayer();

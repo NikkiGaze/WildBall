@@ -12,7 +12,7 @@ public class ButtonTrigger : MonoBehaviour
     {
         
         PlayerController player;
-        if (!_isPressed && TryGetComponent(out player))
+        if (!_isPressed && other.TryGetComponent(out player))
         {
             _HUD.ShowOpenButton(OnButtonPressed);
         }

@@ -11,7 +11,7 @@ public class Bonus : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {    
         PlayerController player;
-        if (TryGetComponent(out player))
+        if (other.TryGetComponent(out player))
         {
             _particle.Play();
             Destroy(_mesh);
